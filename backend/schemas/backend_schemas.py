@@ -155,10 +155,16 @@ class Suggestion(BaseModel):
     status: SuggestionStatus = SuggestionStatus.PENDING
     created_at: str
 
+class SessionEvolutionMetadata(BaseModel):
+    trigger: str
+    missing_events: List[str]
+    affected_branch: str
+
 class Session(BaseModel):
     """Single source of state for the optimization run or sync."""
     session_id: str
     session_type: SessionType = SessionType.JOB_OPTIMIZATION
+    evolution: Optional[SessionEvolutionMetadata] = None
     company: Optional[str] = None
     role: Optional[str] = None
     status: SessionStatus = SessionStatus.CREATED
