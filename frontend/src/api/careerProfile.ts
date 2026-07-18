@@ -1,4 +1,4 @@
-import { CareerProfile } from '../types/backend';
+import type { CareerProfile } from '../types/backend';
 
 const API_BASE = 'http://localhost:8000';
 

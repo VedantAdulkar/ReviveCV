@@ -1,6 +1,6 @@
-import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '../../../shared/ui/Card';
-import { StatusChip, SyncStatus } from '../../../shared/ui/StatusChip';
+import type { SyncStatus } from '../../../shared/ui/StatusChip';
+import { StatusChip } from '../../../shared/ui/StatusChip';
 import { Button } from '../../../shared/ui/Button';
 import { GitBranch, Plus, FileText, Activity } from 'lucide-react';
 
