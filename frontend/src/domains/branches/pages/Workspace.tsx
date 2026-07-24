@@ -214,7 +214,7 @@ export function Workspace() {
           <section className="space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-semibold tracking-tight">Version History</h2>
-              <Button variant="ghost" size="sm" className="h-8 text-xs">View Graph</Button>
+              <Button variant="ghost" size="sm" className="h-8 text-xs" onClick={() => navigate(`/branches/${id || 'ai-engineer'}/versions`)}>View Graph</Button>
             </div>
             <Card className="p-4 font-mono text-sm">
               <div className="space-y-2 text-slate-600 dark:text-slate-400">

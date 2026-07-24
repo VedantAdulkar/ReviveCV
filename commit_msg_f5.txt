@@ -1,0 +1,11 @@
+feat: implement F5 Version Explorer
+
+This commit implements Phase F5, delivering the Version Control Explorer UI.
+
+Core Implementations:
+- Built the 3-panel layout answering Where, Why, What, and Which.
+- Created `VersionDAG` to visualize the resume version graph as a branch tree.
+- Created `VersionProvenance` to expose full lineage (Session -> Events -> Prompt -> Model -> Changes).
+- Created `GroupedDiffViewer` to render changes aggregated by resume section (Summary, Skills, etc.).
+- Integrated artifact actions: Preview, Download, and Promote Version.
+- Wired the "View Graph" button from the Branch Workspace into this new explorer interface.

@@ -3,6 +3,7 @@ import { Dashboard } from './domains/branches/pages/Dashboard';
 import { Workspace } from './domains/branches/pages/Workspace';
 import { CareerProfile } from './domains/career-profile/pages/CareerProfile';
 import { SessionReview } from './domains/sessions/pages/SessionReview';
+import { VersionExplorer } from './domains/versions/pages/VersionExplorer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           {/* F1 Dashboard becomes the home page */}
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/branches/:id" element={<Workspace />} />
+          <Route path="/branches/:id/versions" element={<VersionExplorer />} />
           <Route path="/career-profile" element={<CareerProfile />} />
           <Route path="/sessions/:id" element={<SessionReview />} />
           
