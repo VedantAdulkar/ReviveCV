@@ -1,0 +1,11 @@
+feat: implement F6 Career Evolution Timeline
+
+This commit implements the final major frontend view, the Career Evolution Timeline, answering "How has my professional identity evolved?".
+
+Core Implementations:
+- Built `CareerEvolution.tsx` with a 3-panel coordinated layout treating the career history like a `git log`.
+- Panel 1: Filterable Event Timeline.
+- Panel 2: Event Details & Replay Result, reusing `GroupedDiffViewer` to show exactly how an event mutates the materialized profile.
+- Panel 3: Branch Impact, displaying synchronization status across all persona branches (`Synced` vs `Behind Main`) with deep linking to resolution sessions.
+- Wired a "View All" gateway link from the Career Profile dashboard to this new global timeline.
+- Cleaned up unused Lucide React imports for a strict zero-warning TypeScript compilation.

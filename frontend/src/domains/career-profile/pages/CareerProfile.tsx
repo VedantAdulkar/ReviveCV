@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Card } from '../../../shared/ui/Card';
 import { Button } from '../../../shared/ui/Button';
 import { Badge } from '../../../shared/ui/Badge';
-import { User, Briefcase, GraduationCap, Wrench, Plus, History, ChevronRight } from 'lucide-react';
+import { User, Briefcase, GraduationCap, Wrench, Plus, ChevronRight } from 'lucide-react';
 
 const mockProfile = {
   name: "John Doe",
@@ -24,6 +24,7 @@ const mockProfile = {
 };
 
 export function CareerProfile() {
+  const navigate = useNavigate();
   return (
     <div className="mx-auto max-w-5xl space-y-8 p-8">
       {/* Breadcrumbs */}
@@ -108,7 +109,7 @@ export function CareerProfile() {
         <div className="space-y-6">
           <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
             <h2 className="text-xl font-semibold tracking-tight">Event Timeline</h2>
-            <History className="h-5 w-5 text-slate-400" />
+            <Button variant="ghost" size="sm" className="h-8 text-xs" onClick={() => navigate('/evolution')}>View All</Button>
           </div>
           
           <div className="space-y-6 pl-2">
