@@ -3,6 +3,7 @@ import type { SyncStatus } from '../../../shared/ui/StatusChip';
 import { StatusChip } from '../../../shared/ui/StatusChip';
 import { Button } from '../../../shared/ui/Button';
 import { GitBranch, Plus, FileText, Activity } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 // Mock data based on the user's wireframe
 const branches = [
@@ -33,6 +34,8 @@ const branches = [
 ];
 
 export function Dashboard() {
+  const navigate = useNavigate();
+
   return (
     <div className="mx-auto max-w-5xl space-y-8 p-8">
       <div className="flex items-center justify-between">
@@ -77,7 +80,11 @@ export function Dashboard() {
         <h3 className="text-lg font-medium text-slate-900 dark:text-slate-50">Your Workspaces</h3>
         <div className="grid gap-4 md:grid-cols-2">
           {branches.map(branch => (
-            <Card key={branch.id} className="transition-all hover:shadow-md cursor-pointer">
+            <Card 
+              key={branch.id} 
+              className="transition-all hover:shadow-md cursor-pointer"
+              onClick={() => navigate(`/branches/${branch.id}`)}
+            >
               <CardHeader className="flex flex-row items-start justify-between space-y-0 pb-2">
                 <div className="flex items-center gap-2">
                   <GitBranch className="h-5 w-5 text-slate-500" />

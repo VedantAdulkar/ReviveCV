@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Dashboard } from './domains/branches/pages/Dashboard';
+import { Workspace } from './domains/branches/pages/Workspace';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         <Routes>
           {/* F1 Dashboard becomes the home page */}
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/branches/:id" element={<Workspace />} />
           
           {/* Redirect root to dashboard */}
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
