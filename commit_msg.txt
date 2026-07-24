@@ -1,0 +1,21 @@
+feat: implement F2.5 Workspace UX and F3 Career Profile
+
+This commit implements the frontend UI for Phase F2.5 (Workspace UX Refinements) and Phase F3 (Career Profile Knowledge Base).
+
+F2.5 Workspace Refinements:
+- Added Workspace Health Summary Card (tracks artifact availability and branch sync status)
+- Surfaced active deployment version and timestamp in Current Artifacts panel
+- Updated Recent Sessions to clearly display domain intent (JOB_OPTIMIZATION vs PROFILE_SYNC) and approval status
+- Expanded Configuration panel with industry and strategy metadata
+- Visualized Version History as a Git-style DAG
+- Added explicit breadcrumb navigation
+
+F3 Career Profile:
+- Implemented /career-profile as the personal knowledge base and source of truth
+- Built Materialized Snapshot views for Experience, Projects, and Skills
+- Added Event Timeline to visualize historical CareerEvents (e.g. PROJECT_ADDED, SKILL_ADDED)
+- Added "Record Career Event" call-to-action to trigger the Evolution Engine
+- Hooked up Dashboard navigation to route to the Career Profile
+
+Fixes:
+- Resolved unused import TypeScript errors in Workspace and CareerProfile components ensuring a clean build.

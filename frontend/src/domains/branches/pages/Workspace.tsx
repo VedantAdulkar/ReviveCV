@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardHeader } from '../../../shared/ui/Card';
 import { Button } from '../../../shared/ui/Button';
 import { Badge } from '../../../shared/ui/Badge';
@@ -39,6 +39,7 @@ const workspaceData = {
 
 export function Workspace() {
   const { id } = useParams();
+  const navigate = useNavigate();
   
   // In a real app, fetch data based on `id`
   const data = workspaceData;
@@ -165,7 +166,7 @@ export function Workspace() {
                       </div>
                       <p className="text-xs text-slate-500">{session.date}</p>
                     </div>
-                    <Button variant="outline" size="sm">Review</Button>
+                    <Button variant="outline" size="sm" onClick={() => navigate(`/sessions/${session.id}`)}>Review</Button>
                   </div>
                 ))}
               </div>

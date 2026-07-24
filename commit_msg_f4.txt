@@ -1,0 +1,13 @@
+feat: implement F4 Session Review Decision Workspace
+
+This commit implements the Phase F4 PR-style Decision Workspace, functioning as the primary UI where users review AI recommendations.
+
+Core Implementations:
+- Built a desktop-optimized 3-column layout in SessionReview.tsx.
+- Created `ProgressSummary` for tracking approved/pending/rejected decisions.
+- Created `RecommendationCategoryList` to group AI recommendations by section (Summary, Projects, etc.).
+- Created `DiffViewer` to cleanly visualize text additions and deletions.
+- Created `ReasoningPanel` to surface AI confidence, referenced JD facts, and deterministic domain events (Provenance).
+- Created `DecisionPanel` for atomic user approval actions.
+- Enforced statless UI principles: The "Create Resume Version" button is explicitly highlighted as the final committing action.
+- Wired Workspace Session links to route seamlessly to the new Session Review UI.

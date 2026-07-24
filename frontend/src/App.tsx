@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { Dashboard } from './domains/branches/pages/Dashboard';
 import { Workspace } from './domains/branches/pages/Workspace';
 import { CareerProfile } from './domains/career-profile/pages/CareerProfile';
+import { SessionReview } from './domains/sessions/pages/SessionReview';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/branches/:id" element={<Workspace />} />
           <Route path="/career-profile" element={<CareerProfile />} />
+          <Route path="/sessions/:id" element={<SessionReview />} />
           
           {/* Redirect root to dashboard */}
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
